@@ -46,4 +46,6 @@ jobs:
         run: cargo build --locked --release
 
       - name: Run opus-tools end-to-end tests
+        env:
+          OPUSTAGGER_BIN: target/release/opustagger
         run: sh tests/opustools-e2e.sh
